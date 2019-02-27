@@ -2,11 +2,16 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700" rel="stylesheet" />
   <style>
     body {
       background: white;
-      font-family: "Avenir Next", Helvetica, sans-serif;
+      font-family: "Work Sans", Helvetica, sans-serif;
+      font-weight: 700;
       font-size: 15px;
+      color: #0a0045;
+      background-color: #1ba9d5;
+      margin: 0 1rem;
     }
 
     .font-loader {
@@ -17,12 +22,50 @@
 
     select, input, label {
       margin-bottom: 10px;
+      font-family: inherit;
+      border: 0 solid;
+    }
+
+    input {
+      -webkit-appearance: none;
+    }
+
+    textarea:focus, input:focus{
+        outline: none;
+    }
+
+    input[type=range] {
+      -webkit-appearance: none;
+      margin: 18px 0;
+      width: 100%;
+    }
+    input[type=range]:focus {
+      outline: none;
+    }
+    input[type=range]::-webkit-slider-runnable-track {
+      width: 100%;
+      height: 0.1em;
+      cursor: pointer;
+      animate: 0.2s;
+      background: white;
+    }
+    input[type=range]::-webkit-slider-thumb {
+      height: 2em;
+      width: 2em;
+      border-radius: 50%;
+      background: #0a0045;
+      cursor: pointer;
+      -webkit-appearance: none;
+      margin-top: -1em;
+    }
+    input[type=range]:focus::-webkit-slider-runnable-track {
+      background: #0a0045;
     }
 
     .preview .font-size label,
     .variation-selector .axis label {
       display: inline-block;
-      width: 100px;
+      width: 100%;
     }
 
     .preview .font-size input,
