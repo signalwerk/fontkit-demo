@@ -53,6 +53,7 @@ export default class VariationSelector extends Component {
 
     return (
       <div className="variation-selector">
+        {this.props.children.map(c => Preact.cloneElement(c, {font: this.state.font}))}
         {Object.keys(this.props.font.namedVariations).length > 0 &&
           <select onChange={this.onChange}>
             {Object.keys(this.props.font.namedVariations).map(name =>
@@ -73,7 +74,6 @@ export default class VariationSelector extends Component {
               onInput={this.onAxisChange.bind(this, tag)} />
           </div>
         )}
-        {this.props.children.map(c => Preact.cloneElement(c, {font: this.state.font}))}
       </div>
     );
   }
