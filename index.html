@@ -19,6 +19,22 @@
       /* max-width: 800px; */
     }
 
+    .app,
+    .font-loader,
+    .collection-selector,
+    .variation-selector {
+      height: 100vh;
+    }
+    .variation-selector {
+      overflow-y: scroll;
+    }
+
+    .preview {
+      position: sticky;
+      top: 0;
+      background-color: #1ba9d5;
+    }
+
     a {
       color: white;
     }
@@ -47,7 +63,7 @@
     }
     input[type=range]::-webkit-slider-runnable-track {
       width: 100%;
-      height: 1px;
+      height: 3px;
       cursor: pointer;
       animate: 0.2s;
       background: white;
