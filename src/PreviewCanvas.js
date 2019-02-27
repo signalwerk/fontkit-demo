@@ -2,8 +2,8 @@ import Preact, {Component} from 'preact';
 
 export default class PreviewCanvas extends Component {
   static defaultProps = {
-    width: 500,
-    height: 100
+    width: 800,
+    height: 200
   };
 
   state = {
@@ -30,7 +30,7 @@ export default class PreviewCanvas extends Component {
     let x = 0;
     let y = 0;
 
-    ctx.translate(0, 80);
+    ctx.translate(0, fontSize);
     ctx.scale(1, -1);
 
     run.glyphs.forEach((glyph, index) => {
