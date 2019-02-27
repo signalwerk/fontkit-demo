@@ -49,7 +49,7 @@ export default class FontLoader extends Component {
   render() {
     return (
       <div className="font-loader">
-        <input type="file" onChange={this.onChange} />
+        {!this.props.hideInput && <input type="file" onChange={this.onChange} />}
         {this.state.font && this.props.children.map(c => Preact.cloneElement(c, {font: this.state.font}))}
       </div>
     );

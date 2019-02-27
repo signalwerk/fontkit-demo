@@ -10,7 +10,10 @@ const query = qs.parse(window.location.search.slice(1));
 
 const App = () => (
   <div className="app">
-    <FontLoader url={query.url || "AdobeVFPrototype.otf"}>
+    <FontLoader
+      url={query.url || "AdobeVFPrototype.otf"}
+      hideInput={query.hideInput || false}
+    >
       <CollectionSelector>
         <VariationSelector>
           <Preview
@@ -20,7 +23,6 @@ const App = () => (
         </VariationSelector>
       </CollectionSelector>
     </FontLoader>
-    <footer>Built with <a href="https://github.com/devongovett/fontkit">fontkit</a></footer>
   </div>
 );
 

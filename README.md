@@ -10,6 +10,12 @@ with OpenType variation fonts in your browser.
 The [default demo font](https://github.com/adobe-fonts/adobe-variable-font-prototype) is a prototype
 font designed to showcase variable fonts by Adobe.
 
+## URL-Parameters
+You can pass URL-Parameters to specify the startup status.
+```
+http://{domain}/?url=AmstelvarAlpha-VF.ttf&sampleText=WELT&fontSize=350&hideInput=false
+```
+
 ## License
 
 MIT
