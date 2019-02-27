@@ -4,6 +4,10 @@
   "description": "",
   "author": "Devon Govett <devongovett@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "make dist && make build && npm run copy-font",
+    "copy-font" : "cp src/AmstelvarAlpha-VF.ttf dist/"
+  },
   "dependencies": {
     "autobind-decorator": "^1.4.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
