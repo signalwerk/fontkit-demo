@@ -13,7 +13,10 @@ const App = () => (
     <FontLoader url={query.url || "AdobeVFPrototype.otf"}>
       <CollectionSelector>
         <VariationSelector>
-          <Preview />
+          <Preview
+            sampleText={query.sampleText}
+            fontSize={query.fontSize}
+          />
         </VariationSelector>
       </CollectionSelector>
     </FontLoader>
