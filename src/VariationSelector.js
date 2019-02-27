@@ -64,7 +64,7 @@ export default class VariationSelector extends Component {
         }
         {Object.keys(axes).map(tag =>
           <div className="axis">
-            <label>{axes[tag].name}:</label>
+            <label>{axes[tag].name}</label>
             <input
               type="range"
               min={axes[tag].min}

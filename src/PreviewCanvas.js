@@ -2,7 +2,7 @@ import Preact, {Component} from 'preact';
 
 export default class PreviewCanvas extends Component {
   static defaultProps = {
-    width: 800,
+    width: 1400,
     height: 200
   };
 

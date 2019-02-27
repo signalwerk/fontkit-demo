@@ -75,7 +75,7 @@ export default class Preview extends Component {
           <input type="text" value={this.state.text} onInput={this.onTextChange} />
         </div>
         <div className="font-size">
-          <label>Size:</label>
+          <label>Size</label>
           <input type="range" min={0} max={100} value={this.state.fontFactor} onInput={this.onFontFactorChange} />
         </div>
 
