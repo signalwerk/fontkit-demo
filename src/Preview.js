@@ -14,8 +14,9 @@ export default class Preview extends Component {
 
   getNextState(props) {
     return {
-      text: props.font.getName('sampleText') || 'Hello World',
-      fontSize: this.props.fontSize || 50,
+      text: props.font.getName('sampleText') || (props.sampleText || "Hello World"),
+      fontFactor: 50,
+      fontSize: props.fontSize || 100,
       features: {},
       script: null,
       language: null,
@@ -27,8 +28,8 @@ export default class Preview extends Component {
     this.setState({text: e.target.value});
   }
 
-  onFontSizeChange(e) {
-    this.setState({fontSize: e.target.value});
+  onFontFactorChange(e) {
+    this.setState({fontFactor: e.target.value});
   }
 
   onScriptChange(e) {
@@ -69,13 +70,13 @@ export default class Preview extends Component {
 
     return (
       <div className="preview">
-        <PreviewCanvas run={run} text={this.state.text} font={this.props.font} fontSize={this.state.fontSize} features={this.state.features} />
+        <PreviewCanvas run={run} text={this.state.text} font={this.props.font} fontSize={this.state.fontSize * (this.state.fontFactor / 100)} features={this.state.features} />
         <div className="text-input">
           <input type="text" value={this.state.text} onInput={this.onTextChange} />
         </div>
         <div className="font-size">
           <label>Size:</label>
-          <input type="range" min={0} max={100} value={this.state.fontSize} onInput={this.onFontSizeChange} />
+          <input type="range" min={0} max={100} value={this.state.fontFactor} onInput={this.onFontFactorChange} />
         </div>
 
         <div className="feature-selector">
