@@ -13,7 +13,7 @@ font designed to showcase variable fonts by Adobe.
 ## URL-Parameters
 You can pass URL-Parameters to specify the startup status.
 ```
-http://{domain}/?url=AmstelvarAlpha-VF.ttf&sampleText=WELT&fontSize=350&hideInput=false
+http://{domain}/?url=AmstelvarAlpha-VF.ttf&sampleText=WELT&fontSize=350&hideInput=true
 ```
 
 ## License

@@ -14,7 +14,7 @@ export default class Preview extends Component {
 
   getNextState(props) {
     return {
-      text: props.font.getName('sampleText') || (props.sampleText || "Hello World"),
+      text: props.sampleText || (props.font.getName('sampleText') || "Hello World"),
       fontFactor: 50,
       fontSize: props.fontSize || 100,
       features: {},
