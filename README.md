@@ -1,3 +1,5 @@
+Used during talk [«2019 · State of the Font»](https://signalwerk.github.io/talk.fonts2019/)
+
 # fontkit-demo
 
 This is a demo site using [fontkit](http://github.com/devongovett/fontkit) that lets you play around
